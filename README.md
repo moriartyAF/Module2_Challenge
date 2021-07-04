@@ -1,39 +1,65 @@
-# Project Title
+# Loan Qualification CLI
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This exquisitely simple, yet powerful, CLI application simplifies the loan qualification assessment process by empowering the user to engage with command line prompts to enter and analyze loan information, as well as to save the information to a local drive/directory
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This application incorporates the power of Python 3.8.8 with the following packages & modules:
+
+* **fire**:         Used to create a command-line interface (CLI) in Python.
+* **questionary**:  Used to pose questions to the user, and accept user answers to these questions
+* **sys**:          Used to assist in exiting the programs in the runtime environment (gitbash, et al.)
+* **csv**:          Used to read/write CSV files
+* **os**:           Used for path-related operations (currently inactive)
+* **pathlib**       Used for path-related operations (currently active)
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+Before running the application, the following dependencies must be installed:
 
----
-
-## Examples
-
-This section should include screenshots, code blocks, or animations showing how your project works.
+    pip install fire
+    pip install questionary
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+In addition to the above installed dependencies, the execution of the application requires
+
+  an accessible CSV file of the daily rate sheet
+  a complete set of loan qualification criteria, including
+    
+    credit score
+    monthly income
+    monthly debt
+    loan amount requested
+    home value
+    
+The execution of the application requires inputting the following line of code into the CLI of choice:
+
+    python app.py
+    
+A series of questionary-launched questions will fire requiring user input to complete the process, including the above loan qualification criteria.
+
+Upon successful completion of the program, the following tasks will be completed automatically:
+
+    a generation of a list of lenders whose loan eligibility criteria has been met by the loan applicant.
+    the opportunity to save the list of lenders as a CSV file to a local network.
+    the ability to audit the loan eligibility criteria for lenders for whom the applicant does not qualify.
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project; since you may want to be reached by recruiters or potential collaborators, include your contact e-mail, and optionally your LinkedIn or Twitter profile.
+    Moriarty Consulting LLC
+    Columbia Engineering FinTech Boot Camp
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify others what they can and can not do with your source code and files. Use this section to include the licence you want to use.
+    University of Michigan, Ann Arbor, MI
